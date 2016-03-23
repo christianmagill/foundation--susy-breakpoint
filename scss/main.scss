@@ -1,12 +1,12 @@
 @mixin bp($query, $layout: false){
-  @if $layout{
-    @include breakpoint($query){
+  @include breakpoint($query){
+    @if $layout{
       @include with-layout($layout){
         @content;
       }
     }
-  }
-  else{
-    @content;
+    else{
+      @content;
+    }
   }
 }
